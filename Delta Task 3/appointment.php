@@ -45,6 +45,11 @@ $sql = "SELECT * FROM appointinfo WHERE uid = '$uid' AND adate = '$adate' ORDER 
 
 $result = $conn->query($sql);
 
+if(!$result->num_rows)
+{
+	echo "No appointments<br>";
+}
+
 while($row = $result->fetch_assoc())
 {
 	echo "Title: ".$row['title']." Description: ".$row['descrip']." Date: ".$row['adate']." Start time: ".$row['stime']." End time: ".$row['etime']."<br>";

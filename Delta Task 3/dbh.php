@@ -7,7 +7,7 @@ $conn = new mysqli("localhost","root","");
 
 $sql = "CREATE DATABASE IF NOT EXISTS calenderinfo";
 if ($conn->query($sql) === TRUE) {
-    echo "Database created successfully<br>";
+    //echo "Database created successfully<br>";
 } else {
     echo "Error creating database: " . $conn->error;
 }
@@ -31,7 +31,7 @@ pword VARCHAR(50) NOT NULL
 
 
 if ($conn->query($sql) === TRUE) {
-    echo "Table userinfo created successfully";
+   // echo "Table userinfo created successfully";
 } else {
     echo "Error creating table: " . $conn->error;
 }
